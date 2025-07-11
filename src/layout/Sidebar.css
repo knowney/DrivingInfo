@@ -1,0 +1,95 @@
+/* Sidebar.css */
+
+/* ความสามารถพื้นฐานของ Sidebar */
+.site-layout-background {
+  background: #fff;
+  padding: 16px;
+}
+
+/* ปุ่ม Collapse (ปุ่มยุบ Sidebar) */
+.collapse-icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-size: 24px;
+  color: #1890ff;
+  cursor: pointer;
+}
+
+/* สำหรับมือถือหรือหน้าจอเล็ก */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .ant-layout-sider-children {
+    overflow-y: auto;
+  }
+
+  .ant-layout {
+    margin-left: 0 !important; /* ปรับระยะ margin เมื่อ Sidebar เปิด */
+  }
+}
+
+/* จัดโลโก้ให้อยู่ที่ส่วนบนสุดของ Sider */
+.logo {
+  position: absolute; /* ใช้ตำแหน่งแบบ absolute เพื่อให้โลโก้อยู่ที่ด้านบนสุด */
+  top: 20px; /* ระยะห่างจากขอบบนของ Sider */
+  left: 50%; /* จัดให้โลโก้อยู่กลางแนวนอน */
+  transform: translateX(-50%); /* ทำให้โลโก้อยู่กลางพอดี */
+  display: flex;
+  justify-content: center; /* จัดโลโก้ให้อยู่ตรงกลาง */
+  align-items: center; /* จัดโลโก้ให้อยู่กลางแนวตั้ง */
+  width: 100%; /* โลโก้จะไม่ขยายเกินขนาดนี้ */
+  padding: 0 10px; /* เพิ่มระยะห่างเล็กน้อย */
+  z-index: 1; /* ให้โลโก้อยู่ด้านบนสุด */
+}
+
+/* กำหนดขนาดโลโก้ */
+.logo img {
+  max-width: 220%; /* โลโก้จะปรับขนาดให้พอดีกับพื้นที่ */
+  max-height: 220%; /* กำหนดความสูงของโลโก้ */
+  object-fit: contain; /* ให้โลโก้ปรับขนาดโดยไม่ตัด */
+}
+
+/* Sidebar.css */
+
+/* จัดการรูปแบบเมนูใน Sidebar */
+.ant-menu {
+  margin-top: 120px; /* เพิ่ม margin-top เพื่อจัดระยะห่างจากโลโก้ */
+  background-color: #013467; /* กำหนดสีพื้นหลังให้กับเมนู */
+}
+
+/* เมนูเมื่อไม่เลือก */
+.ant-menu-inline .ant-menu-item {
+  color: #fff; /* เปลี่ยนสีฟอนต์เมนูเป็นสีขาว */
+}
+
+/* เมนูที่ถูกเลือก */
+.ant-menu-light .ant-menu-item-selected {
+  background-color: #6f90b2; /* สีพื้นหลังเมื่อเลือกเมนู */
+  color: #fff; /* สีฟอนต์เมื่อเลือก */
+}
+
+/* เมื่อ hover เมนู */
+.ant-menu-inline .ant-menu-item:hover {
+  color: #fff !important; /* ใช้ !important เพื่อให้แน่ใจว่าสีฟอนต์เป็นสีขาวเมื่อ hover */
+  background-color: #6f90b2; /* สีพื้นหลังเมื่อ hover */
+}
+
+/* เมื่อเมนูถูกเลือกและ hover (ให้มีลำดับความสำคัญสูงสุด) */
+.ant-menu-inline .ant-menu-item-selected:hover {
+  color: #fff !important; /* สีฟอนต์เมื่อเลือกและ hover */
+  background-color: #6f90b2 !important; /* สีพื้นหลังเมื่อเลือกและ hover */
+}
+/* เปลี่ยนสีไอคอนในเมนู */
+.ant-menu-item-icon {
+  color: #fff !important; /* เปลี่ยนสีไอคอนเป็นสีขาว */
+}
+
+/* เมนูยุบ (collapsed) */
+.ant-layout-sider-collapsed .ant-menu-item-icon {
+  color: #fff !important; /* ไอคอนสีขาวเมื่อ Sidebar ยุบ */
+}
