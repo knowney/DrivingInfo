@@ -66,3 +66,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* App.css */
+
+/* Optional: For transition effect when Sidebar opens/closes */
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: Add shadow and rounded corners */
+.sidebar-link:hover {
+  background-color: #4b5563;
+  border-radius: 8px;
+}

@@ -1,0 +1,31 @@
+/* CarInfo.css */
+
+/* Example custom styles for the car info page */
+.car-info-container {
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.car-info-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.car-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.car-detail-item {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.car-detail-item span {
+  font-weight: bold;
+}
